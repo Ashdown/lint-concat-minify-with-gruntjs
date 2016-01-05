@@ -1,6 +1,6 @@
 {
     "name": "lint-concat-minify-with-gruntjs",
-    "description": "Lint and Concat and Minify with GruntJS",
+    "description": "Lint + Concat + Minify With GruntJS",
     "dependencies": {
         "csslint": "^0.10.0",
         "grunt": "^0.4.5",
