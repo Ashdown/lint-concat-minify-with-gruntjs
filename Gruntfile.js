@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     //URI paths for our tasks to use
     grunt.uri = './';
     grunt.uriStatic = grunt.uri + 'static/';
-    grunt.uriDist = grunt.uri + 'dist/';
+    grunt.uriDist = grunt.uriStatic + 'dist/';
     grunt.uriSrc = grunt.uriStatic + 'src/';
     grunt.uriTask = grunt.uri + 'script/grunt/';
 
@@ -19,8 +19,8 @@ module.exports = function(grunt) {
     tasks = require(grunt.uriTask + 'js-lint.js')(grunt, tasks);
 
     //Concatenation tasks
-    //tasks = require(grunt.uriTask + 'css-concat.js')(grunt, tasks);
-    //tasks = require(grunt.uriTask + 'js-concat.js')(grunt, tasks);
+    tasks = require(grunt.uriTask + 'css-concat.js')(grunt, tasks);
+    tasks = require(grunt.uriTask + 'js-concat.js')(grunt, tasks);
 
     //Minify tasks
     //tasks = require(grunt.uriTask + 'css-minify.js')(grunt, tasks);
