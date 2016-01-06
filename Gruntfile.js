@@ -23,9 +23,12 @@ module.exports = function(grunt) {
     tasks = require(grunt.uriTask + 'js-concat.js')(grunt, tasks);
 
     //Minify tasks
-    //tasks = require(grunt.uriTask + 'css-minify.js')(grunt, tasks);
-    //tasks = require(grunt.uriTask + 'html-minify.js')(grunt, tasks);
-    //tasks = require(grunt.uriTask + 'js-minify.js')(grunt, tasks);
+    tasks = require(grunt.uriTask + 'css-minify.js')(grunt, tasks);
+    tasks = require(grunt.uriTask + 'html-minify.js')(grunt, tasks);
+    tasks = require(grunt.uriTask + 'js-minify.js')(grunt, tasks);
+
+    //watch task
+    tasks = require(grunt.uriTask + 'watch.js')(grunt, tasks);
 
     //Register the tasks
     grunt.registerTask('lint', ['csslint', 'jshint', 'htmllint']);
