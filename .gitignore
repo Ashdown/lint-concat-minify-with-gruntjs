@@ -2,3 +2,5 @@
 *.iml
 node_modules
 static/dist
+*.css.map
+.sass-cache

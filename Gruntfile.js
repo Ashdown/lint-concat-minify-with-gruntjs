@@ -13,6 +13,9 @@ module.exports = function(grunt) {
     var tasks = {};
     tasks.concat = {};
 
+    //compilation tasks
+    tasks = require(grunt.uriTask + 'scss.js')(grunt, tasks);
+
     //Lint tasks
     tasks = require(grunt.uriTask + 'css-lint.js')(grunt, tasks);
     tasks = require(grunt.uriTask + 'html-lint.js')(grunt, tasks);
